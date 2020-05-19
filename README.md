@@ -53,7 +53,6 @@ If you want to use the latest dev build then you should read [this blog post](ht
 VS 2019+ is required for developing Xamarin.Forms. If you do not already have it installed, you can download it [here](https://www.visualstudio.com/downloads/download-visual-studio-vs). VS 2019+ Community is completely free. If you are installing VS 2019+ for the first time, select the "Custom" installation type and select the following from the features list to install:
 
 - .NET desktop development - In the `Individual Components > .NET > .NET Framework 4.6.1 SDK, .NET Framework 4.6.1 targeting pack, .NET Framework 4.7.2 SDK, .NET Framework 4.7.2 targeting pack`.
-  - build.cmd -Target provision-windowssdk
 - Universal Windows Platform Development  
   - `Individual Components > SDKs, libraries, and frameworks > Windows 10 SDK (10.0.19041.0), Windows 10 SDK (10.0.18362.0), Windows 10 SDK (10.0.16299.0)`.
   - Download and install 14393 from https://go.microsoft.com/fwlink/p/?LinkId=838916
