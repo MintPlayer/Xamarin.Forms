@@ -219,10 +219,25 @@ Task("provision-androidsdk")
             if(!String.IsNullOrWhiteSpace(ANDROID_HOME))            
                 androidSdkSettings.SdkRoot = ANDROID_HOME;
 
-            AcceptLicenses (androidSdkSettings);
-            AndroidSdkManagerUpdateAll (androidSdkSettings);
-            AcceptLicenses (androidSdkSettings);
-            AndroidSdkManagerInstall (androidSdkManagerInstalls, androidSdkSettings);
+            try{
+                AcceptLicenses (androidSdkSettings);
+            }
+            catch{}
+
+            try{
+                AndroidSdkManagerUpdateAll (androidSdkSettings);
+            }
+            catch{}
+            
+            try{
+                AcceptLicenses (androidSdkSettings);
+            }
+            catch{}
+
+            try{
+                AndroidSdkManagerInstall (androidSdkManagerInstalls, androidSdkSettings);
+            }
+            catch{}
         }
 
         if (!IsRunningOnWindows ()) {
