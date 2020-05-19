@@ -277,7 +277,7 @@ Task("provision-netsdk-local")
     .Description("Install .NET SDK")
     .Does(() =>
     {
-        if(IsRunningOnWindows() && !isHostedAgent)
+        if(IsRunningOnWindows() && !isCIBuild)
         {
             int i = 0;
             foreach(var installUrl in netFrameworkSdksLocalInstall)
