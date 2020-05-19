@@ -354,10 +354,10 @@ Task("provision")
     .Description("Install SDKs required to build project")
     .IsDependentOn("provision-macsdk")
     .IsDependentOn("provision-iossdk")
-    .IsDependentOn("provision-monosdk")
     .IsDependentOn("provision-androidsdk")
     .IsDependentOn("provision-netsdk-local")
-    .IsDependentOn("provision-windowssdk");
+    .IsDependentOn("provision-windowssdk")
+    .IsDependentOn("provision-monosdk");
 
 Task("NuGetPack")
     .Description("Build and Create Nugets")
